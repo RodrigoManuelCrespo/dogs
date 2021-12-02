@@ -5,7 +5,7 @@ const dogsRoute = require('./dogs')
 const temperamentRoute = require('./temperament')
 const createRoute = require('./create')
 
-const router = Router();
+const router = Router(); 
 
 router.use('/dog', createRoute);
 router.use('/dogs', dogsRoute);

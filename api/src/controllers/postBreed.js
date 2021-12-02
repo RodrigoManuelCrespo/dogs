@@ -1,6 +1,7 @@
 const {Temperament, Breed} = require('../db');
 
 const postBreed = async (req,res)=>{
+
     const { 
         name, 
         maxHeight, 
@@ -23,10 +24,9 @@ const postBreed = async (req,res)=>{
         width, 
         life_span, 
         createInDb,
-        temperaments,
     })
 
-    let temperamentDb = await Temperament.findAll({
+    const temperamentDb = await Temperament.findAll({
         where: {
             name: temperaments,
         }
